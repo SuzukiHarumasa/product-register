@@ -3,8 +3,9 @@ sudo: required
 services: docker
 
 env: 
-  - 'DOCKER_USERNAME=sh14124869'
-  - 'DOCKER_ACCESS_TOKEN=35184576-4722-4925-acae-f1719bba0c88'
+  global: 
+    - DOCKER_USERNAME=sh14124869
+    - DOCKER_ACCESS_TOKEN=35184576-4722-4925-acae-f1719bba0c88
 
 before_install:
   - docker login -u $DOCKER_USERNAME -p $DOCKER_ACCESS_TOKEN
